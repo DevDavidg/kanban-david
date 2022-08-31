@@ -1,0 +1,6 @@
+<div class="colorpanel" class="d-flex align-items-center">
+  <div *ngFor="let color of colorsData">
+    <div [ngStyle]="{background: color}" class="color-panel-item shadow-sm" (click)="onColorEmit(color)">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<mat-toolbar class="position-fixed  shadow justify-content-between px-5 mb-4 header-main">
+  <div>
+    <span class="mat-h2"><a href="#" style="color: #fff;">Kanban David</a></span>
+  </div>
+  <div>
+    <app-dialog (emitText)="addColumn($event)" question="Add new column">
+      <button mat-fab class="btn-p">
+        +
+      </button>
+    </app-dialog>
+  </div>
+  <a class="profile_info" href="#">
+    <div class="name_sec">
+      David Guillen
+    </div>
+    <div class="image_profile_sec">
+      <img src="../../../assets/img/David Guillen.png" alt="">
+    </div>
+  </a>
+</mat-toolbar>
