@@ -1,10 +1,16 @@
 {
   "hosting": {
-    "public": "can",
+    "public": "src/kanban-david",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
