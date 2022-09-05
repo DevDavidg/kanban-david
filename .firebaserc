@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "kanban-id"
+  },
+  "targets": {
+    "kanban-id": {
+      "hosting": {
+        "retro-board": [
+          "kanban-id"
+        ]
+      }
+    }
   }
 }
