@@ -7,14 +7,14 @@ import { GoogleauthService } from 'src/app/services/googleauth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  GoogleauthService: GoogleauthService;
 
   constructor(
-    public boardService: BoardService
+    public boardService: BoardService,
+    public authSvc: GoogleauthService
   ) { }
   async onGoogleLogin() {
     try {
-      this.GoogleauthService.loginGoogle();
+      this.authSvc.loginGoogle();
     } catch (error) { console.log(error) }
   }
   ngOnInit(): void {
