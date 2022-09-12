@@ -12,10 +12,8 @@ export class HeaderComponent implements OnInit {
     public boardService: BoardService,
     public authSvc: GoogleauthService
   ) { }
-  async onGoogleLogin() {
-    try {
-      this.authSvc.loginGoogle();
-    } catch (error) { console.log(error) }
+  onGoogleLogin() {
+    this.authSvc.loginGoogle();
   }
   ngOnInit(): void {
   }

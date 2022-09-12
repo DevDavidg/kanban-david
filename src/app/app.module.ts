@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from './header/header.module';
 import { BoardModule } from './board/board.module';
 import { AngularFireModule, FirebaseApp } from '@angular/fire';
-
+import { SETTINGS } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,9 @@ import { AngularFireModule, FirebaseApp } from '@angular/fire';
     BoardModule,
     AngularFireModule.initializeApp(FirebaseApp)
   ],
-  providers: [],
+  providers: [
+    { provide: SETTINGS, useValue: { appVerificationDisabledForTesting: true } },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
